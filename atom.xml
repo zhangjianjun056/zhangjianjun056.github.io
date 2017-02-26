@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Hexo</title>
-  
+  <subtitle>跃马扬鞭傲神州，笑看风云度春秋。三千烦恼皆抛下，十万名山任遨游(*^_^*)</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
