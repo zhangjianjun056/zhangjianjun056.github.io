@@ -15,18 +15,13 @@
 
 
 
-<meta name="description" content="cell中间的分割线左边没有短缺，标题距左边有一定的距离，在开发中会遇到这种情况，实现这种需求也是很简单的，只需要实现两个方法即可。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="第一次测试发布文章5">
-<meta property="og:url" content="http://yoursite.com/2017/02/26/第一次测试发布文章/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="cell中间的分割线左边没有短缺，标题距左边有一定的距离，在开发中会遇到这种情况，实现这种需求也是很简单的，只需要实现两个方法即可。">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1902021-e94e33339b36a8ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-02-26T05:12:53.000Z">
+<meta property="og:updated_time" content="2017-02-26T05:40:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一次测试发布文章5">
-<meta name="twitter:description" content="cell中间的分割线左边没有短缺，标题距左边有一定的距离，在开发中会遇到这种情况，实现这种需求也是很简单的，只需要实现两个方法即可。">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1902021-e94e33339b36a8ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="tags">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>第一次测试发布文章5 | Hexo</title>
+<title>tags | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -68,7 +63,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
+        isPost: false,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -258,11 +253,11 @@
     </div>
     <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
-      <div class="body-wrap"><article id="post-第一次测试发布文章" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/26/第一次测试发布文章/" class="article-date">
-      <time datetime="2017-02-25T17:20:49.000Z" itemprop="datePublished">2017-02-26</time>
+      <a href="/tags/index.html" class="article-date">
+      <time datetime="2017-02-26T05:40:11.000Z" itemprop="datePublished">2017-02-26</time>
 </a>
 
 
@@ -277,7 +272,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第一次测试发布文章5
+      tags
     </h1>
   
 
@@ -287,10 +282,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS开发/">iOS开发</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -298,71 +289,96 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>cell中间的分割线左边没有短缺，标题距左边有一定的距离，在开发中会遇到这种情况，实现这种需求也是很简单的，只需要实现两个方法即可。<br><a id="more"></a></excerpt></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
-<h6 id="如下图"><a href="#如下图" class="headerlink" title="如下图:"></a>如下图:</h6><p><img src="http://upload-images.jianshu.io/upload_images/1902021-e94e33339b36a8ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<h5 id="解决方法如下：只需要写下面的两个方法即可"><a href="#解决方法如下：只需要写下面的两个方法即可" class="headerlink" title="解决方法如下：只需要写下面的两个方法即可"></a>解决方法如下：只需要写下面的两个方法即可</h5><h6 id="步骤一："><a href="#步骤一：" class="headerlink" title="步骤一："></a>步骤一：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">-(void)viewDidLayoutSubviews &#123;</div><div class="line">    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) &#123;</div><div class="line">        [self.tableView setSeparatorInset:UIEdgeInsetsMake(0, 10, 0, 0)];   </div><div class="line">    &#125;</div><div class="line">    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)])  &#123;</div><div class="line">     [self.tableView setLayoutMargins:UIEdgeInsetsZero];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h6 id="步骤二："><a href="#步骤二：" class="headerlink" title="步骤二："></a>步骤二：</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat&#123;</div><div class="line">    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) &#123;</div><div class="line">        [cell setLayoutMargins:UIEdgeInsetsZero];</div><div class="line">    &#125;</div><div class="line">    if ([cell respondsToSelector:@selector(setSeparatorInset:)])&#123;</div><div class="line">        [cell setSeparatorInset:UIEdgeInsetsZero];</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+              <style>
+    .article-meta { display: none; }
+    #container .article .article-title { padding-right: 0; }
+    .article-header {
+        padding: 0;
+        padding-top: 26px;
+        border-left: none;
+        text-align: center;
+    }
+    .article-header:hover { border-left: none; }
+    .article-title { font-size: 1.6em }
+    .article-entry hr { margin: 0;}
+    .article-meta,
+    #container .article-info-post.article-info { display: none;}
+    #container .article .article-title { padding: 0; }
+</style>
 
+
+    <!-- Tag Cloud Page -->
+    <hr>
+<br>
+
+
+<p class="count"></p>
+
+<div class="tags">
+    <a href="/tags/iOS开发/" style="font-size: 16px; color: #808080">iOS开发</a>
+</div>
+<style>
+    .category-list li{
+        display: inline-block;
+        margin: 0 1em .5em 0;
+        padding: 4px;
+        border: 1px solid lightgray;
+        font-size: 1.2rem;
+    }
+    .category-list a { color: gray; }
+    .category-list-item:hover a {
+        color: gray;
+        text-decoration: none;
+    }
+    .category-list-count {
+        margin-left: 2px;
+        font-size: .9rem;
+    }
+    .article-entry ul li:before{ display: none; }
+    .article-inner { text-align: center; }
+    .tags {
+        max-width: 42em;
+        margin: 2em auto;
+        margin-top: 0em;
+    }
+    .tags a {
+        margin-right: 1em;
+        line-height: 65px;
+        border-bottom: 1px solid gray;
+        white-space: nowrap;
+        transition: border-bottom .5s;
+    }
+    .tags a:hover {
+        border-bottom: 3px dotted gray;
+        text-decoration: none;
+    }
+    #count > span {
+        margin: auto .2em;
+        font-weight: bold;
+    }
+</style>
+
+<!-- Count tags and categories -->
+<p id="count">
+         <span><script>document.write($(".category-list-item").length)</script></span>Categories,
+         <span><script>document.write($(".tags > a").length)</script></span>Tags
+</p>
+<script>
+    $('#count').appendTo('.count');
+</script>
+
+          
+        
       
     </div>
     
   </div>
   
     
-    <div class="copyright">
-        <p><span>Title:</span><a href="/2017/02/26/第一次测试发布文章/">第一次测试发布文章5</a></p>
-        <p><span>Author:</span><a href="/" title="Back to Homepage">君见章</a></p>
-        <p><span>Created:</span>2017-02-26, 01:20:49</p>
-        <p><span>Updated:</span>2017-02-26, 13:12:53</p>
-        <p>
-            <span>Full URL:</span><a class="post-url" href="/2017/02/26/第一次测试发布文章/" title="第一次测试发布文章5">http://yoursite.com/2017/02/26/第一次测试发布文章/</a>
-            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2017/02/26/第一次测试发布文章/　　By 君见章" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
-        </p>
-    </div>
 
-
-
-    <nav id="article-nav">
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/02/26/hello-world/">
-                    Hello World
-                </a>
-            </div>
-        
-    </nav>
 
   
 </article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">Contents</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-6"><a class="toc-link" href="#如下图"><span class="toc-number">1.</span> <span class="toc-text">如下图:</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#解决方法如下：只需要写下面的两个方法即可"><span class="toc-number"></span> <span class="toc-text">解决方法如下：只需要写下面的两个方法即可</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#步骤一："><span class="toc-number">1.</span> <span class="toc-text">步骤一：</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#步骤二："><span class="toc-number">2.</span> <span class="toc-text">步骤二：</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
-
-    <script>
-        yiliaConfig.toc = ["Hide", "Show", !!"false"];
-    </script>
 
 
 
@@ -380,7 +396,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"第一次测试发布文章5　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"tags　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -396,7 +412,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/02/26/第一次测试发布文章/" data-title="第一次测试发布文章5" data-url="http://yoursite.com/2017/02/26/第一次测试发布文章/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="tags/index.html" data-title="tags" data-url="http://yoursite.com/tags/index.html"></div>
     <script>
         var duoshuoQuery = {short_name:"zhangjianjun056"};
         var loadComment = function(){
@@ -414,24 +430,6 @@
 </div>
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
-        
-
-        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2017/02/26/hello-world/" title="Next: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/02/26/第一次测试发布文章/">第一次测试发布文章5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/26/hello-world/">Hello World</a></li></ul>
 
 
 
